@@ -1,0 +1,70 @@
+{
+  "name": "@sitearcade/jest-preset",
+  "version": "0.0.0",
+  "description": "SiteArcade's jest presets.",
+  "license": "MIT",
+  "homepage": "https://sitearcade.com",
+  "repository": "github:sitearcade/jest-preset",
+  "bugs": "https://github.com/sitearcade/jest-preset/issues",
+  "author": {
+    "name": "Mike Stop Continues",
+    "email": "mike@sitearcade.com",
+    "url": "https://sitearcade.com"
+  },
+  "main": "jest-preset.js",
+  "scripts": {
+    "postpublish": "git push origin --all; git push origin --tags",
+    "postversion": "npm publish --access public",
+    "preversion": "npm test",
+    "test": "echo 'Seems fine...'"
+  },
+  "dependencies": {
+    "@storybook/addon-docs": "^6.0.21",
+    "@testing-library/dom": "^7.24.3",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/react-hooks": "^3.4.1",
+    "@testing-library/user-event": "^12.1.6",
+    "babel-jest": "^26.3.0",
+    "find-config": "^1.0.0",
+    "globby": "^11.0.1",
+    "jest-css-modules": "^2.1.0",
+    "jest-date-mock": "^1.0.8",
+    "jest-extended": "^0.11.5",
+    "jest-junit": "^11.1.0",
+    "jest-slow-test-reporter": "^1.0.0",
+    "jest-styled-components": "^7.0.3",
+    "react-test-renderer": "^16.13.1",
+    "yaml-jest": "^1.0.5"
+  },
+  "peerDependencies": {
+    "jest": "^26.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@sitearcade/eslint-config": "0.2.2",
+    "babel-eslint": "11.0.0-beta.2",
+    "eslint": "7.9.0",
+    "eslint-import-resolver-lerna": "1.1.0",
+    "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-better-styled-components": "1.1.2",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-fp": "2.3.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jest": "24.0.2",
+    "eslint-plugin-jest-formatting": "2.0.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-lodash": "7.1.0",
+    "eslint-plugin-optimize-regex": "1.2.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-ramda": "2.5.1",
+    "eslint-plugin-react": "7.21.2",
+    "eslint-plugin-react-hooks": "4.1.2",
+    "jest": "26.4.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@sitearcade/eslint-config"
+    ]
+  }
+}
