@@ -6,8 +6,8 @@ const {packageResolve, packageUses, compact, lernaPackages, root} = require('./l
 
 // export
 
+console.log('gets here');
 module.exports = {
-
   reporters: [
     'default',
     [
@@ -38,7 +38,7 @@ module.exports = {
   snapshotResolver: path.resolve(__dirname, './libs/snapshotResolver.js'),
 
   setupFilesAfterEnv: compact([
-    '<rootDir>/tools/jest/libs/testSetup.js',
+    path.resolve(__dirname, './libs/testSetup.js'),
     'jest-date-mock',
     'jest-extended',
     '@testing-library/jest-dom/extend-expect',
