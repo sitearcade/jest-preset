@@ -6,7 +6,6 @@ const {packageResolve, packageUses, compact, lernaPackages, root} = require('./l
 
 // export
 
-console.log('gets here');
 module.exports = {
   reporters: [
     'default',
