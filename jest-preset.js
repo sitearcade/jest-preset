@@ -28,6 +28,9 @@ module.exports = {
     '\\.(css|less|scss)$': '<rootDir>/node_modules/jest-css-modules',
   },
 
+  automock: false,
+  clearMocks: true,
+
   transform: {
     '^.+\\.[jt]sx?$': 'babel-jest',
     '^.+\\.ya?ml$': 'yaml-jest',
