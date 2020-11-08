@@ -12,6 +12,7 @@ const waitForTimeout = (ms) =>
 module.exports = {
   fetchMock: require('jest-fetch-mock'),
   ...require('jest-date-mock'),
+  ...require('jest-mock-proxy'),
   ...require('@testing-library/dom'),
   ...require('@testing-library/jest-dom'),
   ...require('@testing-library/react'),
