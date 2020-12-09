@@ -1,7 +1,7 @@
 // import
 
 const {waitFor} = require('@testing-library/dom');
-const MatchMediaMock = require('jest-matchmedia-mock');
+const {default: MatchMediaMock} = require('jest-matchmedia-mock');
 
 // fns
 
