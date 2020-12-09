@@ -19,10 +19,10 @@ try {
 // export
 
 module.exports = {
-  fetchMock: require('jest-fetch-mock'),
-  matchMediaMock: new MatchMediaMock(),
   dateMock: require('jest-date-mock'),
   proxyMock: require('jest-mock-proxy'),
+  fetchMock: require('jest-fetch-mock'),
+  matchMediaMock: new MatchMediaMock(),
 
   ...require('@testing-library/dom'),
   ...require('@testing-library/jest-dom'),
