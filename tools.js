@@ -1,6 +1,7 @@
 // import
 
 const {waitFor} = require('@testing-library/dom');
+const MatchMediaMock = require('jest-matchmedia-mock');
 
 // fns
 
@@ -12,7 +13,6 @@ const waitForTimeout = (ms) =>
 let hasReact = false;
 
 try {
-  // eslint-disable-next-line import/no-extraneous-dependencies
   hasReact = require('react/package.json');
 } catch {}
 
@@ -20,6 +20,7 @@ try {
 
 module.exports = {
   fetchMock: require('jest-fetch-mock'),
+  matchMediaMock: new MatchMediaMock(),
   ...require('jest-date-mock'),
   ...require('jest-mock-proxy'),
   ...require('@testing-library/dom'),
