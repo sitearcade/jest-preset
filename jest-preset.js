@@ -34,7 +34,8 @@ module.exports = {
   transform: {
     '^.+\\.[jt]sx?$': 'babel-jest',
     '^.+\\.ya?ml$': 'yaml-jest',
-    '^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx',
+    ...(packageUses('@storybook/addon-docs') ?
+      {'^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx'} : {}),
   },
   testMatch: ['**/*.test.(js|jsx)'],
   snapshotResolver: path.resolve(__dirname, './libs/snapshotResolver.js'),

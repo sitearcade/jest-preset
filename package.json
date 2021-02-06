@@ -19,7 +19,6 @@
     "test": "echo 'Seems fine...'"
   },
   "dependencies": {
-    "@storybook/addon-docs": "^6.1.17",
     "@testing-library/dom": "^7.29.4",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -42,6 +41,9 @@
   },
   "peerDependencies": {
     "jest": "^26.6.3"
+  },
+  "optionalDependencies": {
+    "@storybook/addon-docs": "^6.1.17"
   },
   "devDependencies": {
     "@babel/core": "7.12.13",
