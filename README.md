@@ -28,3 +28,5 @@ Our browserslist config.
   ]),
 }
 ```
+
+4. Supports `@storybook/addon-doc`. Just install it in your project, and it'll do the right thing.
