@@ -8,7 +8,11 @@ const globby = require('globby');
 // vars
 
 const root = path.parse(find('lerna.json') || '').dir;
-const packageDeps = Object.keys(find.require('package.json').devDependencies);
+const packageJson = find.require('package.json');
+const packageDeps = Object.keys({
+  ...packageJson.dependencies ?? {},
+  ...packageJson.devDependencies ?? {},
+});
 
 // export
 
