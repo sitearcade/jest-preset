@@ -13,6 +13,7 @@ const waitForTimeout = (ms) =>
 let hasReact = false;
 
 try {
+  // eslint-disable-next-line import/no-extraneous-dependencies
   hasReact = require('react/package.json');
 } catch {}
 
