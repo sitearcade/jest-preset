@@ -19,7 +19,7 @@ module.exports = {
     ],
   ],
 
-  moduleFileExtensions: ['js', 'jsx', 'json'],
+  moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
   modulePaths: [
     '<rootDir>',
     ...lernaPackages.map((loc) => loc.replace(root, '<rootDir>')),
@@ -40,7 +40,7 @@ module.exports = {
         {}
     ),
   },
-  testMatch: ['**/*.test.(js|jsx)'],
+  testMatch: ['**/*.test.(js|jsx|ts|tsx)'],
   snapshotResolver: path.resolve(__dirname, './libs/snapshotResolver.js'),
 
   setupFilesAfterEnv: compact([
