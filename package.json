@@ -23,7 +23,8 @@
   },
   "files": [
     "dist",
-    "jest-preset.js"
+    "jest-preset.js",
+    "tools.js"
   ],
   "scripts": {
     "start": "microbundle watch --no-compress -f cjs,esm,modern",
