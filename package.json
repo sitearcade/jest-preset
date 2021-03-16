@@ -1,6 +1,6 @@
 {
   "name": "@sitearcade/jest-preset",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "SiteArcade's jest presets.",
   "license": "MIT",
   "homepage": "https://www.sitearcade.com",
