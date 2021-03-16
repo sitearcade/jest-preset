@@ -18,7 +18,8 @@
   "module": "./dist/index.module.js",
   "esmodule": "./dist/index.modern.js",
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./jest-preset.js": "./jest-preset.js"
   },
   "files": [
     "dist"
