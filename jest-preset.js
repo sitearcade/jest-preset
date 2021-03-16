@@ -2,7 +2,32 @@
 
 const path = require('path');
 
-const {packageResolve, packageUses, compact, lernaPackages, root} = require('./libs/lofi');
+const find = require('find-config');
+const globby = require('globby');
+
+// vars
+
+const root = path.parse(find('lerna.json') || '').dir;
+const packageJson = find.require('package.json');
+const packageDeps = Object.keys({
+  ...packageJson.dependencies ?? {},
+  ...packageJson.devDependencies ?? {},
+});
+
+const lernaPackages =
+  ((find.require('lerna.json') || {}).packages || [])
+    .flatMap((loc) => globby.sync([loc, '!**/node_modules/**'], {
+      cwd: root,
+      onlyDirectories: true,
+      expandDirectories: false,
+    }))
+    .map((loc) => path.resolve(root, loc));
+
+// fns
+
+const compact = (arr) => arr.filter(Boolean);
+const packageResolve = (...args) => path.resolve(process.cwd(), ...args);
+const packageUses = (str) => packageDeps.includes(str);
 
 // export
 
@@ -32,7 +57,8 @@ module.exports = {
   clearMocks: true,
 
   transform: {
-    '^.+\\.[jt]sx?$': 'babel-jest',
+    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.tsx?$': 'ts-jest',
     '^.+\\.ya?ml$': 'yaml-jest',
     ...(
       packageUses('@storybook/addon-docs') ?
@@ -47,7 +73,7 @@ module.exports = {
     path.resolve(__dirname, './libs/testSetup.js'),
     'jest-date-mock',
     'jest-extended',
-    '@testing-library/jest-dom/extend-expect',
+    '@testing-library/jest-dom',
     packageUses('styled-components') && 'jest-styled-components',
   ]),
 
