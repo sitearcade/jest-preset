@@ -14,12 +14,10 @@
   "sideEffects": false,
   "source": "src/index.ts",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.module.js",
-  "esmodule": "./dist/index.modern.js",
+  "main": "./jest-preset.js",
   "exports": {
-    ".": "./dist/index.js",
-    "./jest-preset.js": "./jest-preset.js"
+    ".": "./jest-preset.js",
+    "./tools": "./dist/index.js"
   },
   "files": [
     "dist"
