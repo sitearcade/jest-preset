@@ -13,7 +13,7 @@
   },
   "sideEffects": false,
   "source": "src/**/*",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/tools.d.ts",
   "main": "./dist/jest-preset.js",
   "module": "./dist/jest-preset.module.js",
   "esmodule": "./dist/jest-preset.modern.js",
