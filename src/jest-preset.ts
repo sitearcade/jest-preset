@@ -67,10 +67,10 @@ module.exports = {
     ),
   },
   testMatch: ['**/*.test.(js|jsx|ts|tsx)'],
-  snapshotResolver: path.resolve(__dirname, '../libs/snapshotResolver.js'),
+  snapshotResolver: path.resolve(__dirname, './snapshotResolver.js'),
 
   setupFilesAfterEnv: compact([
-    path.resolve(__dirname, '../libs/testSetup.js'),
+    path.resolve(__dirname, './testSetup.js'),
     'jest-date-mock',
     'jest-extended',
     '@testing-library/jest-dom',

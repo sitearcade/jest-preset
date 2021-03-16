@@ -6,3 +6,7 @@ try {
   // eslint-disable-next-line import/no-extraneous-dependencies
   window.React = require('react');
 } catch {}
+
+// export
+
+export {};

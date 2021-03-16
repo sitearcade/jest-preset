@@ -4,10 +4,10 @@ const cwd = process.cwd();
 
 // export
 
-module.exports = {
+export default {
   testPathForConsistencyCheck: `${cwd}/subdir/example.test.js`,
 
-  resolveSnapshotPath(testPath, ext) {
+  resolveSnapshotPath(testPath: string, ext: string) {
     return [
       cwd,
       '/.test/snapshots',
@@ -16,7 +16,7 @@ module.exports = {
     ].join('');
   },
 
-  resolveTestPath(shotPath, ext) {
+  resolveTestPath(shotPath: string, ext: string) {
     return shotPath.replace('/.test/snapshots', '').replace(ext, '');
   },
 };
