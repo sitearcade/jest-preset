@@ -12,12 +12,14 @@
     "url": "https://www.sitearcade.com"
   },
   "sideEffects": false,
-  "source": "src/index.ts",
+  "source": "src/**/*",
   "types": "./dist/index.d.ts",
-  "main": "./jest-preset.js",
+  "main": "./dist/jest-preset.js",
+  "module": "./dist/jest-preset.module.js",
+  "esmodule": "./dist/jest-preset.modern.js",
   "exports": {
-    ".": "./jest-preset.js",
-    "./tools": "./dist/index.js"
+    ".": "./dist/jest-preset.js",
+    "./tools": "./dist/tools.js"
   },
   "files": [
     "dist"
@@ -60,6 +62,7 @@
   },
   "devDependencies": {
     "@sitearcade/eslint-config": "1.4.0",
+    "@types/find-config": "1.0.0",
     "microbundle": "0.13.0"
   },
   "eslintConfig": {
